@@ -88,7 +88,7 @@ markdownMode:bindWithAutomaticExit('b', function()
 end)
 
 markdownMode:bindWithAutomaticExit('i', function()
-  wrapSelectedText('*')
+  wrapSelectedText('_')
 end)
 
 markdownMode:bindWithAutomaticExit('s', function()
