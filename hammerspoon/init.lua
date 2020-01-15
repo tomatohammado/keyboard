@@ -1,8 +1,20 @@
 local log = hs.logger.new('init.lua', 'debug')
 
--- Use Control+` to reload Hammerspoon config
+-- Use Hyper + ` to reload Hammerspoon config
 hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, '`', nil, function()
   hs.reload()
+end)
+
+-- Inspired by webpro dotfiles https://github.com/webpro/dotfiles/tree/master/config/hammerspoon
+
+-- Use Hyper + l to lock screen (screen saver)
+hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, 'l', nil, function()
+  hs.caffeinate.startScreensaver()
+end)
+
+-- Use Hyper + w to print `¯\_(ツ)_/¯`
+hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, 'l', nil, function()
+  hs.eventtap.keyStrokes('¯\\_(ツ)_/¯')
 end)
 
 keyUpDown = function(modifiers, key)
@@ -35,7 +47,7 @@ require('keyboard.control-escape')
 require('keyboard.delete-words')
 require('keyboard.hyper')
 require('keyboard.markdown')
-require('keyboard.microphone')
+-- require('keyboard.microphone')
 require('keyboard.panes')
 require('keyboard.windows')
 
