@@ -13,9 +13,9 @@ hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, 'l', nil, function()
 end)
 
 -- Use Hyper + w to print `¯\_(ツ)_/¯`
-hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, 'l', nil, function()
-  hs.eventtap.keyStrokes('¯\\_(ツ)_/¯')
-end)
+-- hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, 'q', nil, function()
+--   hs.eventtap.keyStrokes('¯\\_(ツ)_/¯')
+-- end)
 
 keyUpDown = function(modifiers, key)
   -- Un-comment & reload config to log each keystroke that we're triggering
