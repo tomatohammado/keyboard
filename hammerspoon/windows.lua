@@ -154,6 +154,17 @@ function hs.window.centerWithFullHeight(win)
   win:setFrame(f)
 end
 
+-- +--------------+
+-- |  +--------+  |
+-- |  |  HERE  |  |
+-- |  +--------+  |
+-- +---------------+
+function hs.window.centerPreserveHeight(win)
+  local f = win:frame()
+  local screen = win:screen()
+  win:centerOnScreen(screen)
+end
+
 -- +-----------------+
 -- |      |          |
 -- | HERE |          |
