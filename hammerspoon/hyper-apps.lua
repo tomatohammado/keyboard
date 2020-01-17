@@ -8,6 +8,7 @@ return {
   { 'p', 'System Preferences' },  -- "P" for "Preferences"
   { 'e', 'Visual Studio Code' },  -- "E" for "Editor"
   { 't', 'iTerm' },               -- "T" for "Terminal"
+  { 'o', 'TogglDesktop' },        -- "O" for "T(o)ggl"
   { 'm', 'Spotify' },             -- "M" for "Music"
   { 'c', 'Google Chrome' },       -- "C" for "Chrome"
   { 'n', 'Notion' },              -- "N" for "Notion"
