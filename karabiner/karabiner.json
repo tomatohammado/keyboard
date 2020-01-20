@@ -18,9 +18,9 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change right control to Hyper (i.e., command+control+option+shift)",
+                                "description": "Change right option to Hyper (i.e., command+control+option+shift)",
                                 "from": {
-                                    "key_code": "right_control",
+                                    "key_code": "right_option",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -636,14 +636,6 @@
                         },
                         {
                             "from": {
-                                "key_code": "right_option"
-                            },
-                            "to": {
-                                "key_code": "left_command"
-                            }
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_option"
                             },
                             "to": {
@@ -660,10 +652,10 @@
                         },
                         {
                             "from": {
-                                "key_code": "left_control"
+                                "key_code": "right_option"
                             },
                             "to": {
-                                "key_code": "right_control"
+                                "key_code": "right_command"
                             }
                         }
                     ]
@@ -802,22 +794,6 @@
                 {
                     "from": {
                         "key_code": "caps_lock"
-                    },
-                    "to": {
-                        "key_code": "left_control"
-                    }
-                },
-                {
-                    "from": {
-                        "key_code": "left_control"
-                    },
-                    "to": {
-                        "key_code": "right_control"
-                    }
-                },
-                {
-                    "from": {
-                        "key_code": "right_control"
                     },
                     "to": {
                         "key_code": "left_control"
