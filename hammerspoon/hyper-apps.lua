@@ -9,10 +9,16 @@ return {
   { 'e', 'Visual Studio Code' },  -- "E" for "Editor"
   { 't', 'iTerm' },               -- "T" for "Terminal"
   { 'o', 'TogglDesktop' },        -- "O" for "T(o)ggl"
-  { 'm', 'Spotify' },             -- "M" for "Music"
+  { 's', 'Spotify' },             -- "S" for "Spotify"
   { 'c', 'Google Chrome' },       -- "C" for "Chrome"
   { 'n', 'Notion' },              -- "N" for "Notion"
-  { 'd', 'Things' },              -- "D" for "Do!" or "Done!"
+  { 'd', 'Things3' },              -- "D" for "Do!" or "Done!"
   { 'a', 'Slack' },               -- "A" for "Sl(a)ck"
   { 'm', 'Messages' },            -- "M" for "Messages"
 }
+
+-- Additional Application Hotkeys
+-- 
+-- 'b'   -- "B" for "Bartender"
+-- 'v'   -- "V" for "Di(v)vy"
+-- 'r'   -- "R" for "Calenda(r)" ie Fantastical
