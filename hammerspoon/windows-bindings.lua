@@ -30,7 +30,7 @@ return {
   trigger   = 's',
   mappings  = {
     { {},         'return', 'maximize' },
-    { {},         'space',  'centerPreserveHeight' },
+    { {},         'space',  'centerAndPreserveSize' },
     { {'shift'},  'space',  'centerWithFullHeight' },
     { {},         'h',      'left' },
     { {},         'j',      'down' },

@@ -159,7 +159,7 @@ end
 -- |  |  HERE  |  |
 -- |  +--------+  |
 -- +---------------+
-function hs.window.centerPreserveHeight(win)
+function hs.window.centerAndPreserveSize(win)
   local f = win:frame()
   local screen = win:screen()
   win:centerOnScreen(screen)
