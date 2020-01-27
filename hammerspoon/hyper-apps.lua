@@ -8,13 +8,14 @@ return {
   { 'p', 'System Preferences' },  -- "P" for "Preferences"
   { 'e', 'Visual Studio Code' },  -- "E" for "Editor"
   { 't', 'iTerm' },               -- "T" for "Terminal"
-  { 'o', 'TogglDesktop' },        -- "O" for "T(o)ggl"
+  { 'g', 'TogglDesktop' },        -- "O" for "To(g)gl"
   { 's', 'Spotify' },             -- "S" for "Spotify"
   { 'c', 'Google Chrome' },       -- "C" for "Chrome"
   { 'n', 'Notion' },              -- "N" for "Notion"
-  { 'd', 'Things3' },              -- "D" for "Do!" or "Done!"
+  { 'd', 'Things3' },             -- "D" for "Do!" or "Done!"
   { 'a', 'Slack' },               -- "A" for "Sl(a)ck"
   { 'm', 'Messages' },            -- "M" for "Messages"
+  { 'o', 'Discord' },             -- "O" for "Disc(o)rd"
 }
 
 -- Additional Application Hotkeys
