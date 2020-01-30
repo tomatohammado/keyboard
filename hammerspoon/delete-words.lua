@@ -35,36 +35,45 @@ enableHotkeyForWindowsMatchingFilter(wf, hs.hotkey.new({'ctrl'}, 'u', function()
   keyUpDown({'cmd'}, 'delete')
 end))
 
--- Use control + ; to delete to end of line
---
--- I prefer to use control+h/j/k/l to move left/down/up/right by one pane in all
--- multi-pane apps (e.g., iTerm, various editors). That's convenient and
--- consistent, but it conflicts with the default macOS binding for deleting to
--- the end of the line (i.e., control+k). To maintain that very useful
--- functionality, and to keep it on the home row, this hotkey binds control+; to
--- delete to the end of the line.
-hs.hotkey.bind({'ctrl'}, ';', function()
-  -- If we're in the terminal, then temporarily disable our custom control+k
-  -- hotkey used for pane navigation, then fire control+k to delete to the end
-  -- of the line, and then renable the control+k hotkey.
-  --
-  -- If we're not in the terminal, then just select to the end of the line and
-  -- then delete the selected text.
-  if isInTerminal() then
-    hotkeyForControlK = hs.fnutils.find(hs.hotkey.getHotkeys(), function(hotkey)
-      return hotkey.idx == '⌃K'
-    end)
-    if hotkeyForControlK then hotkeyForControlK:disable() end
+-- New: Use control + k to delete to end of line
+enableHotkeyForWindowsMatchingFilter(wf, hs.hotkey.new({'ctrl'}, 'k', function()
+  keyUpDown({'cmd', 'shift'}, 'right')
+  keyUpDown({}, 'forwarddelete')
+end))
 
-    keyUpDown({'ctrl'}, 'k')
+-- Comment out previous delete to beginning shortcut
+-- I'd rather keep contrl + k for consistency
 
-    -- Allow some time for the control+k keystroke to fire asynchronously before
-    -- we re-enable our custom control+k hotkey.
-    hs.timer.doAfter(0.2, function()
-      if hotkeyForControlK then hotkeyForControlK:enable() end
-    end)
-  else
-    keyUpDown({'cmd', 'shift'}, 'right')
-    keyUpDown({}, 'forwarddelete')
-  end
-end)
+-- -- Use control + ; to delete to end of line
+-- --
+-- -- I prefer to use control+h/j/k/l to move left/down/up/right by one pane in all
+-- -- multi-pane apps (e.g., iTerm, various editors). That's convenient and
+-- -- consistent, but it conflicts with the default macOS binding for deleting to
+-- -- the end of the line (i.e., control+k). To maintain that very useful
+-- -- functionality, and to keep it on the home row, this hotkey binds control+; to
+-- -- delete to the end of the line.
+-- hs.hotkey.bind({'ctrl'}, ';', function()
+--   -- If we're in the terminal, then temporarily disable our custom control+k
+--   -- hotkey used for pane navigation, then fire control+k to delete to the end
+--   -- of the line, and then renable the control+k hotkey.
+--   --
+--   -- If we're not in the terminal, then just select to the end of the line and
+--   -- then delete the selected text.
+--   if isInTerminal() then
+--     hotkeyForControlK = hs.fnutils.find(hs.hotkey.getHotkeys(), function(hotkey)
+--       return hotkey.idx == '⌃K'
+--     end)
+--     if hotkeyForControlK then hotkeyForControlK:disable() end
+
+--     keyUpDown({'ctrl'}, 'k')
+
+--     -- Allow some time for the control+k keystroke to fire asynchronously before
+--     -- we re-enable our custom control+k hotkey.
+--     hs.timer.doAfter(0.2, function()
+--       if hotkeyForControlK then hotkeyForControlK:enable() end
+--     end)
+--   else
+--     keyUpDown({'cmd', 'shift'}, 'right')
+--     keyUpDown({}, 'forwarddelete')
+--   end
+-- end)
