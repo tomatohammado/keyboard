@@ -28,5 +28,5 @@ return {
 -- Additional Application Hotkeys
 -- 
 -- 'b'   -- "B" for "Bartender"
--- 'v'   -- "V" for "Di(v)vy"
+-- 'i'   -- "I" for "D(i)vvy"
 -- 'r'   -- "R" for "Calenda(r)" ie Fantastical
