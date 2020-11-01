@@ -88,14 +88,14 @@ markdownMode:bindWithAutomaticExit('b', function()
 end)
 
 markdownMode:bindWithAutomaticExit('i', function()
-  wrapSelectedText('_')
+  wrapSelectedText('*')
 end)
 
 markdownMode:bindWithAutomaticExit('s', function()
   wrapSelectedText('~~')
 end)
 
-markdownMode:bindWithAutomaticExit('l', function()
+markdownMode:bindWithAutomaticExit('k', function()
   inlineLink()
 end)
 
