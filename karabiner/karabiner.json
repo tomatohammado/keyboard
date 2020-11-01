@@ -185,30 +185,28 @@
                         ]
                     },
                     {
-                        "description": "Caps Lock to Escape on single press, Control on press and hold.",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
+                      "description": "Control to Escape on single press, Control on press and hold.",
+                      "manipulators": [
+                        {
+                          "from": {
+                            "key_code": "left_control",
+                            "modifiers": {
+                              "optional": ["any"]
                             }
-                        ]
+                          },
+                          "to": [
+                            {
+                              "key_code": "left_control"
+                            }
+                          ],
+                          "to_if_alone": [
+                            {
+                              "key_code": "escape"
+                            }
+                          ],
+                          "type": "basic"
+                        }
+                      ]
                     }
                 ]
             },
@@ -316,18 +314,18 @@
                         },
                         {
                             "from": {
-                                "key_code": "right_option"
-                            },
-                            "to": {
-                                "key_code": "right_command"
-                            }
-                        },
-                        {
-                            "from": {
                                 "key_code": "right_control"
                             },
                             "to": {
                                 "key_code": "right_option"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_option"
+                            },
+                            "to": {
+                                "key_code": "right_command"
                             }
                         }
                     ]
