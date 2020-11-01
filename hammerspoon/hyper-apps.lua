@@ -5,28 +5,29 @@
 -- your preferred shortcuts.
 return {
   -- System
-  { 'f', 'Finder' },              -- "F" for "Finder"
-  { 'p', 'System Preferences' },  -- "P" for "Preferences"
+  -- { 'f', 'Finder' },              -- "F" for "Finder"
+  -- { 'p', 'System Preferences' },  -- "P" for "Preferences"
   -- Development
-  { 'e', 'Visual Studio Code' },  -- "E" for "Editor"
   { 't', 'iTerm' },               -- "T" for "Terminal"
-  { 'c', 'Google Chrome' },       -- "C" for "Chrome"
+  { 'v', 'Visual Studio Code' },  -- "E" for "Editor"
+  -- { 'c', 'Google Chrome' },       -- "C" for "Chrome"
   -- Writing
-  { 'n', 'Notion' },              -- "N" for "Notion"
-  { 'y', 'Byword' },              -- "Y" for "B(y)word"
+  -- { 'e', 'Bear' },                -- "E" for "B(e)ar"
+  -- { 'n', 'Notion' },              -- "N" for "Notion"
+  -- { 'y', 'Byword' },              -- "Y" for "B(y)word"
   -- Music
-  { 's', 'Spotify' },             -- "S" for "Spotify"
+  -- { 's', 'Spotify' },             -- "S" for "Spotify"
   -- Messaging
-  { 'a', 'Slack' },               -- "A" for "Sl(a)ck"
-  { 'm', 'Messages' },            -- "M" for "Messages"
-  { 'o', 'Discord' },             -- "O" for "Disc(o)rd"
+  -- { 'a', 'Slack' },               -- "A" for "Sl(a)ck"
+  -- { 'm', 'Messages' },            -- "M" for "Messages"
+  -- { 'o', 'Discord' },             -- "O" for "Disc(o)rd"
   -- Productivity
-  { 'g', 'TogglDesktop' },        -- "O" for "To(g)gl"
-  { 'd', 'Things3' },             -- "D" for "Do!" or "Done!"
+  -- { 'g', 'TogglDesktop' },        -- "O" for "To(g)gl"
+  -- { 'd', 'Things3' },             -- "D" for "Do!" or "Done!"
 }
 
 -- Additional Application Hotkeys
--- 
+--
 -- 'b'   -- "B" for "Bartender"
 -- 'i'   -- "I" for "D(i)vvy"
 -- 'r'   -- "R" for "Calenda(r)" ie Fantastical
