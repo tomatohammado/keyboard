@@ -179,6 +179,21 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Avoid starting sysdiagnose with the built-in macOS shortcut cmd+shift+option+ctrl+,",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": ["command", "shift", "option", "control"]
+                  }
+                },
+                "to": [],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
