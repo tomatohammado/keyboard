@@ -5,8 +5,9 @@ local isInTerminal = function()
   return app == 'iTerm2' or app == 'Terminal'
 end
 
--- Use option + h to delete previous word
-hs.hotkey.bind({'alt'}, 'h', function()
+-- Use shift + option + h to delete previous word
+-- Added 'shift' juuust in case I ever want the default 'option + KEY'
+hs.hotkey.bind({'shift', 'alt'}, 'h', function()
   if isInTerminal() then
     keyUpDown({'ctrl'}, 'w')
   else
@@ -14,8 +15,10 @@ hs.hotkey.bind({'alt'}, 'h', function()
   end
 end)
 
--- Use option + l to delete next word
-hs.hotkey.bind({'alt'}, 'l', function()
+-- Use shift + option + i to delete next word
+-- Added 'shift' juuust in case I ever want the default 'option + KEY'
+-- is normally 'l', change to 'i' for Colemak homerow arrow equivalent
+hs.hotkey.bind({'shift', 'alt'}, 'i', function()
   if isInTerminal() then
     keyUpDown({}, 'escape')
     keyUpDown({}, 'd')
