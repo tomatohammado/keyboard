@@ -8,9 +8,9 @@ end)
 -- Inspired by webpro dotfiles https://github.com/webpro/dotfiles/tree/master/config/hammerspoon
 
 -- Use Hyper + l to lock screen (screen saver)
-hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, 'l', nil, function()
-  hs.caffeinate.startScreensaver()
-end)
+-- hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, 'l', nil, function()
+--   hs.caffeinate.startScreensaver()
+-- end)
 
 -- Use Hyper + w to print `¯\_(ツ)_/¯`
 -- hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, 'q', nil, function()
@@ -43,8 +43,8 @@ enableHotkeyForWindowsMatchingFilter = function(windowFilter, hotkey)
   end)
 end
 
-require('keyboard.hyper')
-require('keyboard.panes')
+-- require('keyboard.hyper')
+-- require('keyboard.panes')
 require('keyboard.delete-words')
 -- require('keyboard.control-escape')
 -- require('keyboard.markdown')
