@@ -28,7 +28,7 @@
       ]
     },
     {
-      "description": "Spacebar + Right Shift → Right Command",
+      "description": "Hook-Thumb Remedy: Spacebar + Right Shift → Right Command",
       "manipulators": [
         {
           "type": "basic",
@@ -40,10 +40,6 @@
               ]
             }
           },
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
-          },
           "to": [
             {
               "key_code": "right_command"
@@ -53,7 +49,7 @@
       ]
     },
     {
-      "description": "Colemak Vim Arrows: Enable via Left Shift + Space",
+      "description": "Colemak Vimish Navigation: Enable via Left Shift + Space",
       "manipulators": [
         {
           "type": "basic",
@@ -68,7 +64,7 @@
           "to": [
             {
               "set_variable": {
-                "name": "colemak_vim_arrows",
+                "name": "colemak_vimish_nav",
                 "value": 1
               }
             }
@@ -76,7 +72,7 @@
           "to_after_key_up": [
             {
               "set_variable": {
-                "name": "colemak_vim_arrows",
+                "name": "colemak_vimish_nav",
                 "value": 0
               }
             }
@@ -85,7 +81,7 @@
       ]
     },
     {
-      "description": "Colemak Vim Arrows: m/n/e/i → arrows",
+      "description": "Colemak Vimish Navigation: Arrows, Page Up/Down, Home/End",
       "manipulators": [
         {
           "type": "basic",
@@ -95,7 +91,7 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "colemak_vim_arrows",
+              "name": "colemak_vimish_nav",
               "value": 1
             }
           ],
@@ -113,7 +109,7 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "colemak_vim_arrows",
+              "name": "colemak_vimish_nav",
               "value": 1
             }
           ],
@@ -131,7 +127,7 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "colemak_vim_arrows",
+              "name": "colemak_vimish_nav",
               "value": 1
             }
           ],
@@ -149,13 +145,85 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "colemak_vim_arrows",
+              "name": "colemak_vimish_nav",
               "value": 1
             }
           ],
           "to": [
             {
               "key_code": "right_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "colemak_vimish_nav",
+              "value": 1
+            }
+          ],
+          "to": [
+            {
+              "key_code": "page_down"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "colemak_vimish_nav",
+              "value": 1
+            }
+          ],
+          "to": [
+            {
+              "key_code": "page_up"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "colemak_vimish_nav",
+              "value": 1
+            }
+          ],
+          "to": [
+            {
+              "key_code": "end"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "colemak_vimish_nav",
+              "value": 1
+            }
+          ],
+          "to": [
+            {
+              "key_code": "home"
             }
           ]
         }
