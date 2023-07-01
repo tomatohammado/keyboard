@@ -28,15 +28,15 @@
       ]
     },
     {
-      "description": "Change spacebar to right_command. (Post spacebar if pressed alone)",
+      "description": "Spacebar + Right Shift → Right Command",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "spacebar",
             "modifiers": {
-              "optional": [
-                "any"
+              "mandatory": [
+                "right_shift"
               ]
             }
           },
@@ -44,14 +44,118 @@
             "basic.to_if_alone_timeout_milliseconds": 250,
             "basic.to_if_held_down_threshold_milliseconds": 250
           },
-          "to_if_alone": [
-            {
-              "key_code": "spacebar"
-            }
-          ],
-          "to_if_held_down": [
+          "to": [
             {
               "key_code": "right_command"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Colemak Vim Arrows: Enable via Left Shift + Space",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "colemak_vim_arrows",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "colemak_vim_arrows",
+                "value": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Colemak Vim Arrows: m/n/e/i → arrows",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "colemak_vim_arrows",
+              "value": 1
+            }
+          ],
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "e"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "colemak_vim_arrows",
+              "value": 1
+            }
+          ],
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "colemak_vim_arrows",
+              "value": 1
+            }
+          ],
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "colemak_vim_arrows",
+              "value": 1
+            }
+          ],
+          "to": [
+            {
+              "key_code": "right_arrow"
             }
           ]
         }
