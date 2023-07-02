@@ -81,12 +81,17 @@
       ]
     },
     {
-      "description": "Colemak Vimish Navigation: Arrows, Page Up/Down, Home/End",
+      "description": "Colemak Vimish Navigation: h/j/k/l, Page Up/Down, Home/End",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "n"
+            "key_code": "n",
+            "modifiers": {
+              "optional": [
+                "shift"
+              ]
+            }
           },
           "conditions": [
             {
@@ -97,14 +102,19 @@
           ],
           "to": [
             {
-              "key_code": "down_arrow"
+              "key_code": "j"
             }
           ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "e"
+            "key_code": "e",
+            "modifiers": {
+              "optional": [
+                "shift"
+              ]
+            }
           },
           "conditions": [
             {
@@ -115,14 +125,19 @@
           ],
           "to": [
             {
-              "key_code": "up_arrow"
+              "key_code": "k"
             }
           ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "m"
+            "key_code": "i",
+            "modifiers": {
+              "optional": [
+                "shift"
+              ]
+            }
           },
           "conditions": [
             {
@@ -133,14 +148,19 @@
           ],
           "to": [
             {
-              "key_code": "left_arrow"
+              "key_code": "l"
             }
           ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "i"
+            "key_code": "m",
+            "modifiers": {
+              "optional": [
+                "shift"
+              ]
+            }
           },
           "conditions": [
             {
@@ -151,7 +171,7 @@
           ],
           "to": [
             {
-              "key_code": "right_arrow"
+              "key_code": "h"
             }
           ]
         },
