@@ -7,8 +7,8 @@
         {
           "type": "basic",
           "from": { "key_code": "left_control" },
-          "to": [ { "key_code": "left_control" } ],
-          "to_if_alone": [ { "key_code": "escape" } ]
+          "to": [{ "key_code": "left_control" }],
+          "to_if_alone": [{ "key_code": "escape" }]
         }
       ]
     },
@@ -19,9 +19,9 @@
           "type": "basic",
           "from": {
             "key_code": "spacebar",
-            "modifiers": { "mandatory": [ "right_shift" ] }
+            "modifiers": { "mandatory": ["right_shift"] }
           },
-          "to": [ { "key_code": "right_command" } ]
+          "to": [{ "key_code": "right_command" }]
         }
       ]
     },
@@ -32,7 +32,7 @@
           "type": "basic",
           "from": {
             "key_code": "spacebar",
-            "modifiers": { "mandatory": [ "left_shift" ] }
+            "modifiers": { "mandatory": ["left_shift"] }
           },
           "to": [
             {
@@ -66,13 +66,13 @@
               "value": 1
             }
           ],
-          "to": [ { "key_code": "down_arrow" } ]
+          "to": [{ "key_code": "down_arrow" }]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "n",
-            "modifiers": { "mandatory": [ "shift" ] }
+            "modifiers": { "mandatory": ["shift"] }
           },
           "conditions": [
             {
@@ -81,10 +81,7 @@
               "value": 1
             }
           ],
-          "to": [
-            { "key_code": "5" },
-            { "key_code": "down_arrow" }
-          ]
+          "to": [{ "key_code": "5" }, { "key_code": "down_arrow" }]
         },
         {
           "type": "basic",
@@ -96,13 +93,13 @@
               "value": 1
             }
           ],
-          "to": [ { "key_code": "up_arrow" } ]
+          "to": [{ "key_code": "up_arrow" }]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "e",
-            "modifiers": { "mandatory": [ "shift" ] }
+            "modifiers": { "mandatory": ["shift"] }
           },
           "conditions": [
             {
@@ -111,10 +108,7 @@
               "value": 1
             }
           ],
-          "to": [
-            { "key_code": "5" },
-            { "key_code": "up_arrow" }
-          ]
+          "to": [{ "key_code": "5" }, { "key_code": "up_arrow" }]
         },
         {
           "type": "basic",
@@ -126,13 +120,13 @@
               "value": 1
             }
           ],
-          "to": [ { "key_code": "right_arrow" } ]
+          "to": [{ "key_code": "right_arrow" }]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "i",
-            "modifiers": { "mandatory": [ "shift" ] }
+            "modifiers": { "mandatory": ["shift"] }
           },
           "conditions": [
             {
@@ -141,7 +135,7 @@
               "value": 1
             }
           ],
-          "to": [ { "key_code": "right_arrow" } ]
+          "to": [{ "key_code": "right_arrow" }]
         },
         {
           "type": "basic",
@@ -153,13 +147,13 @@
               "value": 1
             }
           ],
-          "to": [ { "key_code": "left_arrow" } ]
+          "to": [{ "key_code": "left_arrow" }]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "m",
-            "modifiers": { "mandatory": [ "shift" ] }
+            "modifiers": { "mandatory": ["shift"] }
           },
           "conditions": [
             {
@@ -168,7 +162,7 @@
               "value": 1
             }
           ],
-          "to": [ { "key_code": "left_arrow" } ]
+          "to": [{ "key_code": "left_arrow" }]
         },
         {
           "type": "basic",
@@ -180,7 +174,7 @@
               "value": 1
             }
           ],
-          "to": [ { "key_code": "page_down" } ]
+          "to": [{ "key_code": "page_down" }]
         },
         {
           "type": "basic",
@@ -192,8 +186,7 @@
               "value": 1
             }
           ],
-          "to": [ { "key_code": "page_up" }
-          ]
+          "to": [{ "key_code": "page_up" }]
         },
         {
           "type": "basic",
@@ -205,19 +198,15 @@
               "value": 1
             }
           ],
-          "to": [ { "key_code": "end" } ]
+          "to": [{ "key_code": "end" }]
         },
         {
           "type": "basic",
           "from": { "key_code": "comma" },
           "conditions": [
-            {
-              "type": "variable_if",
-              "name": "colemak_vimish_nav",
-              "value": 1
-            }
+            { "type": "variable_if", "name": "colemak_vimish_nav", "value": 1 }
           ],
-          "to": [ { "key_code": "home" } ]
+          "to": [{ "key_code": "home" }]
         }
       ]
     }
