@@ -194,6 +194,32 @@
                         ]
                     },
                     {
+                        "description": "Control to Escape on single press, Control on press and hold.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Hook-Thumb Remedy: Spacebar + Right Shift → Right Command",
                         "manipulators": [
                             {
@@ -205,7 +231,7 @@
                                         ]
                                     }
                                 },
-                                "to": [
+                                "to_if_held_down": [
                                     {
                                         "key_code": "right_command"
                                     }
@@ -247,8 +273,26 @@
                         ]
                     },
                     {
-                        "description": "Colemak Vimish Navigation: h/j/k/l, Page Up/Down, Home/End",
+                        "description": "Colemak Vimish Navigation: Arrows, Page Up/Down, Home/End",
                         "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "colemak_vimish_nav",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "n"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
                             {
                                 "conditions": [
                                     {
@@ -260,14 +304,35 @@
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
-                                        "optional": [
+                                        "mandatory": [
                                             "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "j"
+                                        "key_code": "5"
+                                    },
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "colemak_vimish_nav",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "e"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -283,14 +348,35 @@
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
-                                        "optional": [
+                                        "mandatory": [
                                             "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "k"
+                                        "key_code": "5"
+                                    },
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "colemak_vimish_nav",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -306,14 +392,32 @@
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
-                                        "optional": [
+                                        "mandatory": [
                                             "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "l"
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "colemak_vimish_nav",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "m"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -329,14 +433,14 @@
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
-                                        "optional": [
+                                        "mandatory": [
                                             "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "h"
+                                        "key_code": "left_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -409,27 +513,6 @@
                                 "to": [
                                     {
                                         "key_code": "home"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Control to Escape on single press, Control on press and hold.",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_control"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "escape"
                                     }
                                 ],
                                 "type": "basic"
