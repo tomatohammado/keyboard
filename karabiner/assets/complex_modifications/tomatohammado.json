@@ -6,7 +6,10 @@
       "manipulators": [
         {
           "type": "basic",
-          "from": { "key_code": "left_control" },
+          "from": {
+            "key_code": "left_control",
+            "modifiers": { "optional": ["any"] }
+          },
           "to": [{ "key_code": "left_control" }],
           "to_if_alone": [{ "key_code": "escape" }]
         }
@@ -21,7 +24,7 @@
             "key_code": "spacebar",
             "modifiers": { "mandatory": ["right_shift"] }
           },
-          "to": [{ "key_code": "right_command" }]
+          "to_if_held_down": [{ "key_code": "right_command" }]
         }
       ]
     },
