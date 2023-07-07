@@ -7,25 +7,28 @@ end
 
 -- Use shift + option + h to delete previous word
 -- Added 'shift' juuust in case I ever want the default 'option + KEY'
-hs.hotkey.bind({'shift', 'alt'}, 'h', function()
-  if isInTerminal() then
-    keyUpDown({'ctrl'}, 'w')
-  else
-    keyUpDown({'alt'}, 'delete')
-  end
-end)
+
+-- hs.hotkey.bind({'shift', 'alt'}, 'h', function()
+--   if isInTerminal() then
+--     keyUpDown({'ctrl'}, 'w')
+--   else
+--     keyUpDown({'alt'}, 'delete')
+--   end
+-- end)
 
 -- Use shift + option + i to delete next word
 -- Added 'shift' juuust in case I ever want the default 'option + KEY'
 -- is normally 'l', change to 'i' for Colemak homerow arrow equivalent
-hs.hotkey.bind({'shift', 'alt'}, 'i', function()
-  if isInTerminal() then
-    keyUpDown({}, 'escape')
-    keyUpDown({}, 'd')
-  else
-    keyUpDown({'alt'}, 'forwarddelete')
-  end
-end)
+
+-- hs.hotkey.bind({'shift', 'alt'}, 'i', function()
+--   if isInTerminal() then
+--     keyUpDown({}, 'escape')
+--     keyUpDown({}, 'd')
+--   else
+--     keyUpDown({'alt'}, 'forwarddelete')
+--   end
+-- end)
+
 
 -- Use control + u to delete to beginning of line
 --
@@ -39,10 +42,10 @@ enableHotkeyForWindowsMatchingFilter(wf, hs.hotkey.new({'ctrl'}, 'u', function()
 end))
 
 -- New: Use control + k to delete to end of line
-enableHotkeyForWindowsMatchingFilter(wf, hs.hotkey.new({'ctrl'}, 'k', function()
-  keyUpDown({'cmd', 'shift'}, 'right')
-  keyUpDown({}, 'forwarddelete')
-end))
+-- enableHotkeyForWindowsMatchingFilter(wf, hs.hotkey.new({'ctrl'}, 'k', function()
+--   keyUpDown({'cmd', 'shift'}, 'right')
+--   keyUpDown({}, 'forwarddelete')
+-- end))
 
 -- Comment out previous delete to beginning shortcut
 -- I'd rather keep contrl + k for consistency
