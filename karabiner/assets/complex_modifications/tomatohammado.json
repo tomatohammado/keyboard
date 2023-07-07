@@ -2,15 +2,15 @@
   "title": "tomatohammado mods",
   "rules": [
     {
-      "description": "Control to Escape on single press, Control on press and hold.",
+      "description": "Right Control to Escape on single press, Control on hold.",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "left_control",
+            "key_code": "right_control",
             "modifiers": { "optional": ["any"] }
           },
-          "to": [{ "key_code": "left_control" }],
+          "to": [{ "key_code": "right_control" }],
           "to_if_alone": [{ "key_code": "escape" }]
         }
       ]
@@ -24,7 +24,28 @@
             "key_code": "spacebar",
             "modifiers": { "mandatory": ["right_shift"] }
           },
-          "to_if_held_down": [{ "key_code": "right_command" }]
+          "to_if_held_down": [{ "key_code": "right_command" }],
+          "to": [
+            { "set_variable": { "name": "spacebar_command_mode", "value": 1 } }
+          ],
+          "to_after_key_up": [
+            { "set_variable": { "name": "spacebar_command_mode", "value": 0 } }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": { "optional": ["right_command"] }
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "spacebar_command_mode",
+              "value": 1
+            }
+          ],
+          "to": [{ "key_code": "spacebar" }]
         }
       ]
     },
