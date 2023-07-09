@@ -16,7 +16,7 @@
       ]
     },
     {
-      "description": "Hook-Thumb Remedy: Spacebar + Right Shift → Right Command",
+      "description": "Spacebar-Command Mode: Spacebar + Right Shift to Right Command",
       "manipulators": [
         {
           "type": "basic",
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "description": "Colemak Vimish Navigation: Enable via Left Shift + Space",
+      "description": "Colemak Vimish Navigation: Activate via Left Shift + Space",
       "manipulators": [
         {
           "type": "basic",
@@ -112,23 +112,7 @@
         },
         {
           "type": "basic",
-          "from": { "key_code": "i", "modifiers": { "mandatory": ["shift"] } },
-          "conditions": [
-            { "type": "variable_if", "name": "colemak_vimish_nav", "value": 1 }
-          ],
-          "to": [{ "key_code": "right_arrow" }]
-        },
-        {
-          "type": "basic",
           "from": { "key_code": "m" },
-          "conditions": [
-            { "type": "variable_if", "name": "colemak_vimish_nav", "value": 1 }
-          ],
-          "to": [{ "key_code": "left_arrow" }]
-        },
-        {
-          "type": "basic",
-          "from": { "key_code": "m", "modifiers": { "mandatory": ["shift"] } },
           "conditions": [
             { "type": "variable_if", "name": "colemak_vimish_nav", "value": 1 }
           ],
