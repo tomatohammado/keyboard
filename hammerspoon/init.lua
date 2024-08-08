@@ -45,7 +45,7 @@ end
 
 -- require('keyboard.hyper')
 -- require('keyboard.panes')
-require('keyboard.delete-words')
+-- require('keyboard.delete-words')
 -- require('keyboard.control-escape')
 -- require('keyboard.markdown')
 -- require('keyboard.microphone')
